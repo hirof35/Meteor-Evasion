@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Meteor Evasion - Difficulty Select</title>
+    <style>
+        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; }
+        #game-container { position: relative; }
+        canvas { border: 2px solid #58a6ff; background: radial-gradient(circle, #161b22 0%, #000 100%); }
+        
+        /* 難易度選択メニューのスタイル */
+        #menu {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; color: white; background: rgba(0, 0, 0, 0.8); padding: 20px; border-radius: 10px; border: 1px solid #58a6ff;
+        }
+        button {
+            display: block; width: 150px; margin: 10px auto; padding: 10px;
+            cursor: pointer; background: #161b22; color: #58a6ff; border: 1px solid #58a6ff; font-weight: bold;
+        }
+        button:hover { background: #58a6ff; color: #000; }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div id="menu">
+            <h1>METEOR EVASION</h1>
+            <p>難易度を選択してください</p>
+            <button onclick="startGame('EASY')">EASY</button>
+            <button onclick="startGame('NORMAL')">NORMAL</button>
+            <button onclick="startGame('HARD')">HARD</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
